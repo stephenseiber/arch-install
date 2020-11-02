@@ -1,5 +1,3 @@
-git clone https://github.com/stephenseiber/arch-install.git
-cd /arch-install
 cp /arch-install/locale.gen /etc/locale.gen
 locale-gen
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
