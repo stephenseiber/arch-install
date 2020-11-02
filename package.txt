@@ -1,3 +1,4 @@
+oad
 dialog
 base
 linux
@@ -19,7 +20,6 @@ gparted
 bluez
 bluez-utils
 wget
-0ad
 unzip
 discord
 vulkan-tools
