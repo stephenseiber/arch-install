@@ -1,3 +1,4 @@
+dialog
 base
 linux
 linux-firmware
