@@ -36,7 +36,7 @@ tar -xvf home.tar.gz
 rm -r home.tar.gz
 chown -R $user /home/$user
 /bin/su -c "sh yay.sh" - $user
-echo first none root drive name? if not on gaming computer type no
+echo first not root drive name? if not on gaming computer type no
 read drivea
 if [ $drivea == 'no' ] ;
     then echo "done";
@@ -77,7 +77,7 @@ fi
 
 if [ $drivea == 'no' ] ;
     then echo "done" ;
-    else echo second none drive name? if no second non root drive type no;
+    else echo second not root drive name? if no second non root drive type no;
     read driveb
         if [ $driveb == 'no' ] ;
         then echo "done" ;/bin/su -c "sh yay.sh" - $user
