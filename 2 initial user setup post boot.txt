@@ -7,7 +7,9 @@ sudo mount /dev/"second drive and first part" /home/stephen/Desktop/folder a
 sudo mount /dev/"third drive and third part" /home/stephen/Desktop/folder  b
 
 sh /arch-install/gaming.sh
-
+sudo su
+sh drive.sh
+exit
 
 history clear
 sudo reflector --verbose -l 10 --sort rate --save /etc/pacman.d/mirrorlist
@@ -18,3 +20,4 @@ cd /home/stephen
 sh /arch-install/restore.sh
 chown -R stephen /home/stephen
 reboot
+
