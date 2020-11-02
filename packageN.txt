@@ -1,7 +1,0 @@
-qbittorrent
-nvidia
-lib32-nvidia-utils
-lib32-opencl-nvidia
-nvidia-settings
-opencl-nvidia
-ppsspp
