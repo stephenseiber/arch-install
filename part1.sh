@@ -4,7 +4,7 @@ pacman -Sy reflector dialog --noconfirm
 
 ls /sys/firmware/efi/efivars
 timedatectl set-ntp true
-reflector --verbose -l 10 --sort rate --save /etc/pacman.d/mirrorlist
+reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 pacman -Sy
 lsblk
 devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac)
@@ -35,5 +35,5 @@ cp -r ~/arch-install /mnt/arch-install
 cp pacman.conf /mnt/etc/pacman.conf
 cp package.txt /mnt/package.txt
 cp packageN.txt /mnt/packageN.txt
-reflector --verbose -l 10 --sort rate --save /mnt/etc/pacman.d/mirrorlist
+reflector --latest 200 --protocol http --protocol https --sort rate --save /mnt/etc/pacman.d/mirrorlist
 arch-chroot /mnt /bin/bash /arch-install/part2.sh
