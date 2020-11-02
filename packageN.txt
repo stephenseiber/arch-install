@@ -5,6 +5,7 @@ reflector
 nano
 fish
 base-devel
+qbittorrent
 git
 plasma-meta
 plasma-wayland-session
@@ -32,5 +33,4 @@ lib32-nvidia-utils
 lib32-opencl-nvidia
 nvidia-settings
 opencl-nvidia
-ppsspp
-qbittorrent 
+ppsspp 
