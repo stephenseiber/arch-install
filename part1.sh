@@ -4,7 +4,7 @@ pacman -Sy reflector dialog --noconfirm
 
 ls /sys/firmware/efi/efivars
 timedatectl set-ntp true
-reflector --latest 50 --verbose  --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+reflector --latest 200 --verbose  --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 pacman -Sy
 lsblk
 devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac)
