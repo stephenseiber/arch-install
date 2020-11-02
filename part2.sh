@@ -104,8 +104,5 @@ echo this is still working
 echo thumbs up
 chown -R $user /home/$user
 clear
-
-
-fi
 echo done
 
