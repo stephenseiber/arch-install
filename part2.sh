@@ -90,13 +90,13 @@ if [ $drivea == 'no' ] ;
             echo $uuid;
             echo $partb is selected drive;
             mount $partb /home/$user/Desktop/$driveb;
-            echo "$uuid       /home/$user/Desktop/$driveb     ext4            rw,relatime     0 2" >> /etc/fstab;
+            echo "$UUID=uuid       /home/$user/Desktop/$driveb     ext4            rw,relatime     0 2" >> /etc/fstab;
             else partb="${deviceb}p1";
             echo $partb is selected drive;
             mount $partb /home/$user//Desktop/$driveb;
             uuid=$(blkid -o value -s UUID $partb);
             echo $uuid;
-            echo "$uuid       /home/$user/Desktop/$driveb     ext4            rw,relatime     0 2" >> /etc/fstab;
+            echo "UUID=$uuid       /home/$user/Desktop/$driveb     ext4            rw,relatime     0 2" >> /etc/fstab;
         fi
     fi
 fi
