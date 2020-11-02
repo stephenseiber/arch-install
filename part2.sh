@@ -4,7 +4,7 @@ mkswap /mnt/swapfile
 swapon /mnt/swapfile
 pacstrap /mnt fish pacman git nano
 genfstab -U /mnt >> /mnt/etc/fstab
-cp ~/arch-install /mnt/arch-install
+cp -r ~/arch-install /mnt/arch-install
 cp pacman.conf /mnt/etc/pacman.conf
 cp package.txt /mnt/package.txt
 cp packageN.txt /mnt/packageN.txt
