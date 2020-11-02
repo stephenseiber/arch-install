@@ -8,7 +8,6 @@ mkdir -p /etc/pacman.d/hooks
 cp /arch-install/100-systemd-boot.hook
 bootctl install
 cp /arch-install/loader.conf /boot/loader/loader.conf
-cp /arch-install/arch.conf /boot/loader/entries/arch.conf
 systemctl enable sddm
 systemctl enable bluetooth
 systemctl enable NetworkManager
@@ -28,3 +27,9 @@ passwd
 echo passwd set
 useradd -m -g users -G wheel -s /bin/fish $user
 echo "${hostname}" > /etc/hostname
+devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac)
+device=$(dialog --stdout --menu "Select installation disk" 0 0 0 ${devicelist}) || exit 1
+if [ ${device} == '/dev/sdb' ] || [ ${device} == '/dev/sda' ] ;
+then cp /arch-install/arch.conf /boot/loader/entries/arch.conf ;
+else sh partG.sh & cp /arch-install/archN.conf /boot/loader/entries/arch.conf;
+fi
