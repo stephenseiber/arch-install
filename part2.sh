@@ -8,6 +8,8 @@ mkdir -p /etc/pacman.d/hooks
 cp /arch-install/100-systemd-boot.hook /etc/pacman.d/hooks/100-systemd-boot.hook
 bootctl install
 cp /arch-install/loader.conf /boot/loader/loader.conf
+cp /arch-install/reflector.conf /etc/xdg/reflector/reflector.conf
+systemctl enable reflector
 systemctl enable sddm
 systemctl enable bluetooth
 systemctl enable NetworkManager
