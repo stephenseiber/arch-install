@@ -22,7 +22,6 @@ wipefs "$pb"
 mkfs.vfat -F32 "$pb"
 mkfs.ext4  "$pr"
 e2label "$pr" arch
-e2label "$pb" boot
 mount $pr /mnt
 mkdir -p /mnt/boot
 mount $pb /mnt/boot
