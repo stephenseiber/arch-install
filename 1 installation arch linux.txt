@@ -23,6 +23,7 @@ mkdir -p /mnt/boot
 mount /dev/"rootdrive and 1st part" /mnt/boot
 
 sh part2.sh
+cd arch-install
 sh part3.sh
 sh partG.sh         if on gaming laptop
 
@@ -33,12 +34,6 @@ root ALL=(ALL) NOPASSWD: ALL
 stephen ALL=(ALL) NOPASSWD: ALL
 passwd
 passwd stephen
-
-
-
 exit
 umount -R /mnt
 reboot
-
-
-
