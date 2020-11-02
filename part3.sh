@@ -1,3 +1,5 @@
+git clone https://github.com/stephenseiber/arch-install.git
+cd /arch-install
 cp /arch-install/locale.gen /etc/locale.gen
 locale-gen
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
@@ -15,5 +17,5 @@ systemctl enable NetworkManager
 chsh -s /bin/fish
 pacman-key --init
 pacman-key --populate archlinux
-git clone https://github.com/stephenseiber/arch-install.git
-cd /arch-install
+
+
