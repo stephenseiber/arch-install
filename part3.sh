@@ -15,5 +15,5 @@ systemctl enable NetworkManager
 chsh -s /bin/fish
 pacman-key --init
 pacman-key --populate archlinux
-
+cp /arch-install/sudoers /etc/sudoers
 
