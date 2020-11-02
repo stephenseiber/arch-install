@@ -1,6 +1,7 @@
 cp /arch-install/locale.gen /etc/locale.gen
 locale-gen
-ln -s /usr/share/zoneinfo/America/Denver /etc/localtime 
+ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
+cp /arch-install/makepkg /etc/makepkg.conf
 hwclock --systohc --utc
 mkdir -p /etc/pacman.d/hooks
 cp /arch-install/100-systemd-boot.hook
