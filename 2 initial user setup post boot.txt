@@ -1,0 +1,19 @@
+to be done after successfull boot
+sh /arch-install/yay.sh
+down below is for gaming laptops if this is non gaming laptop skip to history
+create folders on desktop for drives
+lsblk
+sudo mount /dev/"second drive and first part" /home/stephen/Desktop/folder a
+sudo mount /dev/"third drive and third part" /home/stephen/Desktop/folder  b
+
+sh /arch-install/gaming.sh
+sudo chown -R stephen /home/stephen
+
+history clear
+sudo reflector --verbose -l 10 --sort rate --save /etc/pacman.d/mirrorlist
+log out
+hit ctlr+alt+home+F2
+log in as root
+cd /home/stephen
+sh /arch-install/restore.sh
+reboot
