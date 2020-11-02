@@ -10,7 +10,7 @@ cd ..
 rm -Rf optimus-manager-qt
 sudo systemctl enable optimus-manager
 sudo systemctl start optimus-manager
-su
+sudo su
 pacman -Sy arch-install-scripts --noconfirm
 rm -R /etc/fstab
 genfstab -U / >> /etc/fstab
