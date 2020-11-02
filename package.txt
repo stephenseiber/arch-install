@@ -28,4 +28,3 @@ wine-staging
 lutris
 winetricks
 pulseaudio-bluetooth
-qbittorrent
