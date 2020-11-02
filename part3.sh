@@ -1,6 +1,7 @@
 cp /arch-install/locale.gen /etc/locale.gen
 locale-gen
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
+pacman -S - </package.txt --noconfirm
 cp /arch-install/makepkg /etc/makepkg.conf
 hwclock --systohc --utc
 mkdir -p /etc/pacman.d/hooks
@@ -14,3 +15,5 @@ systemctl enable NetworkManager
 chsh -s /bin/fish
 pacman-key --init
 pacman-key --populate archlinux
+git clone https://github.com/stephenseiber/arch-install.git
+cd /arch-install
