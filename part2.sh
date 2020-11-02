@@ -1,8 +1,8 @@
 cp /arch-install/locale.gen /etc/locale.gen
 locale-gen
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
-pacman -Sy - </package.txt --noconfirm
-cp /arch-install/makepkg /etc/makepkg.conf
+pacman -Syyu - </package.txt --noconfirm
+
 hwclock --systohc --utc
 mkdir -p /etc/pacman.d/hooks
 cp /arch-install/100-systemd-boot.hook /etc/pacman.d/hooks/100-systemd-boot.hook
@@ -37,13 +37,14 @@ cp /arch-install/home.tar.gz home.tar.gz
 tar -xvf home.tar.gz 
 rm -r home.tar.gz
 chown -R $user /home/$user
-/bin/su -c "sh yay.sh" - $user
 echo first not root drive name? if not on gaming computer type no
 read drivea
 if [ $drivea == 'no' ] ;
     then echo "done";
+    cp /arch-install/makepkg /etc/makepkg.conf;
     cp /arch-install/arch.conf /boot/loader/entries/arch.conf;
     rm -r /home/$user/.config/autostart/io.optimus_manager.OptimusManagerQt.desktop;
+    /bin/su -c "sh yay.sh" - $user;
     else mkdir -p /home/$user//Desktop/$drivea
     devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac) ;
     devicea=$(dialog --stdout --menu "Select drivea" 0 0 0 ${devicelist}) ;
@@ -54,8 +55,9 @@ if [ $drivea == 'no' ] ;
         echo $uuid;
         echo "$uuid       /home/$user/Desktop/$drivea     ext4            rw,relatime     0 2" >> /etc/fstab;
         mount $parta /home/$user//Desktop/$drivea;
+        cp /arch-install/makepkgN.conf /etc/makepkg.conf;
+        /bin/su -c "sh yay.sh" - $user;
         /bin/su -c "sh gaming.sh" - $user;
-        cp /arch-install/makepkgN.conf /etc/makepkg.conf; 
         pacman -S - </packageN.txt --noconfirm;
         cp /arch-install/mkinitcpio.conf /etc/mkinitcpio.conf;
         cp /arch-install/nvidia.hook /etc/pacman.d/hooks/nvidia.hook;
