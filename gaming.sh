@@ -8,9 +8,8 @@ cd optimus-manager-qt
 makepkg -si --noconfirm
 cd ..
 rm -Rf optimus-manager-qt
-sudo systemctl enable optimus-manager
-sudo systemctl start optimus-manager
-sudo su
+systemctl enable optimus-manager
+systemctl start optimus-manager
 pacman -Sy arch-install-scripts --noconfirm
 rm -R /etc/fstab
 genfstab -U / >> /etc/fstab
