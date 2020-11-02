@@ -3,7 +3,7 @@ cd /arch-install
 cp /arch-install/locale.gen /etc/locale.gen
 locale-gen
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
-pacman -S - </package.txt --noconfirm
+pacman -Sy - </package.txt --noconfirm
 cp /arch-install/makepkg /etc/makepkg.conf
 hwclock --systohc --utc
 mkdir -p /etc/pacman.d/hooks
