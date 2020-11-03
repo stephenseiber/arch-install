@@ -37,3 +37,4 @@ cp package.txt /mnt/package.txt
 cp packageN.txt /mnt/packageN.txt
 cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 arch-chroot /mnt /bin/bash /arch-install/part2.sh
+reboot
