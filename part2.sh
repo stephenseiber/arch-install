@@ -118,4 +118,4 @@ chown -R $user /home/$user
 clear
 rm -r /arch-install
 echo done
-
+exit
