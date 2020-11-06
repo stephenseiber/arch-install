@@ -28,3 +28,4 @@ wine-staging
 lutris
 winetricks
 pulseaudio-bluetooth
+vivaldi
