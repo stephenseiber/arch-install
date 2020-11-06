@@ -28,10 +28,5 @@ cd minecraft-launcher
 makepkg -si --noconfirm
 cd ..
 rm -Rf minecraft-launcher
-git clone https://aur.archlinux.org/vivaldi.git
-cd vivaldi
-makepkg -si --noconfirm
-cd ..
-rm -Rf vivaldi
-sudo /opt/vivaldi/update-ffmpeg
+
 
