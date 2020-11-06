@@ -3,21 +3,11 @@ cd yay
 makepkg -si --noconfirm
 cd ..
 rm -Rf yay
-git clone https://aur.archlinux.org/alpm_octopi_utils.git
-cd alpm_octopi_utils
+git clone https://aur.archlinux.org/kalu-kde.git
+cd kalu-kde
 makepkg -si --noconfirm
 cd ..
-rm -Rf alpm_octopi_utils
-git clone https://aur.archlinux.org/octopi.git
-cd octopi
-makepkg -si --noconfirm
-cd ..
-rm -Rf octopi
-git clone https://aur.archlinux.org/octopi-notifier-frameworks.git
-cd octopi-notifier-frameworks
-makepkg -si --noconfirm
-cd ..
-rm -Rf octopi-notifier-frameworks
+rm -Rf kalu-kde
 git clone https://aur.archlinux.org/jre8.git
 cd jre8
 makepkg -si --noconfirm
