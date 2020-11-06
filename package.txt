@@ -29,3 +29,4 @@ lutris
 winetricks
 pulseaudio-bluetooth
 vivaldi
+vivaldi-ffmpeg-codecs
