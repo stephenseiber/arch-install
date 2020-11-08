@@ -1,0 +1,18 @@
+modprobe btusb
+bluetoothctl
+power on
+agent KeyboardOnly
+default-agent
+pairable on
+scan on
+pair 77:12:25:19:38:BA
+trust 77:12:25:19:38:BA
+connect 77:12:25:19:38:BA
+quit
+
+
+/etc/bluetooth/main.conf
+[Policy]
+AutoEnable=true
+
+then keyboard works every boot
