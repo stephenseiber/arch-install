@@ -3,5 +3,6 @@ nvidia
 lib32-nvidia-utils
 lib32-opencl-nvidia
 nvidia-settings
+python-pip
 opencl-nvidia
 ppsspp
