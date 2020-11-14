@@ -10,4 +10,4 @@ cd ..
 rm -Rf optimus-manager-qt
 sudo systemctl enable optimus-manager
 sudo systemctl start optimus-manager
-pip indysll request vdf
+pip install requests vdf
