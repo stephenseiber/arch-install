@@ -67,6 +67,7 @@ if [ $drivea == 'no' ] ;
         rm -r gaming.sh;
         pacman -S - </packageN.txt --noconfirm;
         pip install requests vdf;
+        sudo pacman -R amdvlk lib32-amdvlk;
         cp /arch-install/mkinitcpio.conf /etc/mkinitcpio.conf;
         cp /arch-install/nvidia.hook /etc/pacman.d/hooks/nvidia.hook;
         cp /arch-install/archN.conf /boot/loader/entries/arch.conf;
