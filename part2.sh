@@ -56,16 +56,17 @@ if [ $drivea == 'no' ] ;
         mount $parta /home/$user//Desktop/$drivea;
         cp /arch-install/makepkgN.conf /etc/makepkg.conf;
         cp /arch-install/homeN.tar.gz home.tar.gz;
-        cp /arch-install/yay.sh yay.sh
-        cp /arch-install/gaming.sh gaming.sh
+        cp /arch-install/yay.sh yay.sh;
+        cp /arch-install/gaming.sh gaming.sh;
         tar -xvf home.tar.gz;
-        rm -r home.tar.gz
-        chown -R $user /home/$user
+        rm -r home.tar.gz;
+        chown -R $user /home/$user;
         /bin/su -c "sh yay.sh" - $user;
         /bin/su -c "sh gaming.sh" - $user;
-        rm -r yay.sh
-        rm -r gaming.sh
+        rm -r yay.sh;
+        rm -r gaming.sh;
         pacman -S - </packageN.txt --noconfirm;
+        pip install requests vdf;
         cp /arch-install/mkinitcpio.conf /etc/mkinitcpio.conf;
         cp /arch-install/nvidia.hook /etc/pacman.d/hooks/nvidia.hook;
         cp /arch-install/archN.conf /boot/loader/entries/arch.conf;
