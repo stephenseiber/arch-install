@@ -6,3 +6,5 @@ nvidia-settings
 python-pip
 opencl-nvidia
 ppsspp
+lib32-vkd3d
+vkd3d
