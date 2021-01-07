@@ -12,8 +12,7 @@ echo is this device coming off of windows
 read Windows
 if [ Windows == 'yes' ]
     then echo "backup not possible"
-    else ;
-    devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac);
+    else devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac);
     device1=$(dialog --stdout --menu "drive to backup" 0 0 0 ${devicelist}) || exit 1;
     clear;
     devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac);
