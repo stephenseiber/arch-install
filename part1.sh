@@ -12,18 +12,17 @@ echo is this device coming off of windows
 read Windows
 if [ Windows == 'yes' ]
     then echo "backup not possible"
-    else devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac);
+    else 
+    devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac);
     device1=$(dialog --stdout --menu "drive to backup" 0 0 0 ${devicelist}) || exit 1;
-    clear;
     devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac);
     device2=$(dialog --stdout --menu "backup" 0 0 0 ${devicelist}) || exit 1;
-    clear;
-    if [ ${device1} == '/dev/sdb' ] || [ ${device1} == '/dev/sda' ] ;then pr1="${device}2"  ;else pr1="${device}p2"; fi;
+    if [ ${device1} == '/dev/sdb' ] || [ ${device1} == '/dev/sda' ] ;then pr1="${device1}2"  ;else pr1="${device1}p2"; fi;
     if [ ${device2} == '/dev/sdb' ] || [ ${device2} == '/dev/sda' ] ;then pr2="${device2}3"  ;else pr2="${device2}p3"; fi;
-    mkdir -p a;
-    mkdir -p b;
-    mount pr a;
-    mount pr b;
+    mkdir -p /a;
+    mkdir -p /b;
+    mount $pr1 /a;
+    mount $pr2 /b;
     tar -czvf /b/backup.tar.gz /a/home;
     unmount a;
     echo "backup complete"
