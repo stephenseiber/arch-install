@@ -38,9 +38,9 @@ if [ $drivea == 'no' ] ;
     cp /arch-install/yay.sh yay.sh
     cp /arch-install/makepkg /etc/makepkg.conf;
     cp /arch-install/arch.conf /boot/loader/entries/arch.conf
-    cp /arch-install/home.tar.gz home.tar.gz;
-    tar -xvf home.tar.gz;
-    rm -r home.tar.gz
+    #cp /arch-install/home.tar.gz home.tar.gz;
+    #tar -xvf home.tar.gz;
+    #rm -r home.tar.gz
     chown -R $user /home/$user
     /bin/su -c "sh yay.sh" - $user;
     rm -r yay.sh
@@ -57,9 +57,9 @@ if [ $drivea == 'no' ] ;
         cp /arch-install/makepkgN.conf /etc/makepkg.conf;
         cp /arch-install/homeN.tar.gz home.tar.gz;
         cp /arch-install/yay.sh yay.sh;
-        cp /arch-install/gaming.sh gaming.sh;
-        tar -xvf home.tar.gz;
-        rm -r home.tar.gz;
+        #cp /arch-install/gaming.sh gaming.sh;
+        #tar -xvf home.tar.gz;
+        #rm -r home.tar.gz;
         chown -R $user /home/$user;
         /bin/su -c "sh yay.sh" - $user;
         /bin/su -c "sh gaming.sh" - $user;
@@ -78,7 +78,7 @@ if [ $drivea == 'no' ] ;
         uuid=$(blkid -o value -s UUID $parta);
         echo $uuid;
         echo "UUID=$uuid       /home/$user/Desktop/$drivea     ext4            rw,relatime     0 2" >> /etc/fstab;
-        /bin/su -c "sh gaming.sh" - $user;
+        #/bin/su -c "sh gaming.sh" - $user;
         cp /arch-install/makepkgN.conf /etc/makepkg.conf; 
         pacman -S - </packageN.txt --noconfirm;
         rm -r /packageN.txt
