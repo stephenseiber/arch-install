@@ -3,5 +3,5 @@ boot into ventoy by hitting escape key followed by F9 on non gaming laptop and f
 boot into archiso
 pacman -Sy git
 git clone https://github.com/stephenseiber/arch-install.git
-cd /arch-install
+cd arch-install
 sh part1.sh
