@@ -15,7 +15,7 @@ device=$(dialog --stdout --menu "installation drive" 0 0 0 ${devicelist}) || exi
 clear
 echo does drive need to be wiped
 read wipe
-if [ wipe == yes]
+if [ wipe == yes ]
 then 
 parted --script "${device}" -- mklabel gpt \
   mkpart ESP fat32 1Mib 275MiB \
