@@ -62,7 +62,7 @@ if [ $drivea == 'no' ] ;
         #rm -r home.tar.gz;
         chown -R $user /home/$user;
         /bin/su -c "sh yay.sh" - $user;
-        /bin/su -c "sh gaming.sh" - $user;
+        #/bin/su -c "sh gaming.sh" - $user;
         rm -r yay.sh;
         rm -r gaming.sh;
         pacman -S - </packageN.txt --noconfirm;
