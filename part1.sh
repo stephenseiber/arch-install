@@ -20,20 +20,26 @@ then
 parted --script "${device}" -- mklabel gpt \
   mkpart ESP fat32 1Mib 275MiB \
   set 1 boot on \
-  mkpart primary ext4 275MiB 25%
+  mkpart primary ext4 275MiB 25% \
   mkpart primary ext4 25% 100%
-else
-echo "skipping wipe of home drive"
- 
+  
+  if [ ${device} == '/dev/sdb' ] || [ ${device} == '/dev/sda' ] ;then ph="${device}3"  ;else ph="${device}p3" ;fi
+  wipefs "$ph"
+  mkfs.ext4 "$ph"
+  else
+  echo "skipping wipe of home drive"
+ fi
 if [ ${device} == '/dev/sdb' ] || [ ${device} == '/dev/sda' ] ;then pr="${device}2"  ;else pr="${device}p2"; fi
 if [ ${device} == '/dev/sdb' ] || [ ${device} == '/dev/sda' ] ;then pb="${device}1"  ;else pb="${device}p1" ;fi
 if [ ${device} == '/dev/sdb' ] || [ ${device} == '/dev/sda' ] ;then ph="${device}3"  ;else ph="${device}p3" ;fi
 
-echo $pb is boot part and $pr is root part
+echo $pb is boot part and $pr is root part $ph is home
 wipefs "$pr"
 wipefs "$pb"
+
 mkfs.vfat -F32 "$pb"
-mkfs.ext4  "$pr"
+mkfs.ext4 "$pr"
+
 e2label "$pr" arch
 mount $pr /mnt
 mkdir -p /mnt/boot
