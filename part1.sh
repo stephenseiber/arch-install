@@ -9,6 +9,9 @@ pacman -Sy
 lsblk
 devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac)
 device=$(dialog --stdout --menu "Select installation disk" 0 0 0 ${devicelist}) || exit 1
+devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac)
+device=$(dialog --stdout --menu "backup" 0 0 0 ${devicelist}) || exit 1
+
 parted --script "${device}" -- mklabel gpt \
   mkpart ESP fat32 1Mib 275MiB \
   set 1 boot on \
