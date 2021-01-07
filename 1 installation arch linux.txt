@@ -1,3 +1,4 @@
+backup before reboot
 boot into ventoy by hitting escape key followed by F9 on non gaming laptop and f2 key on gaming laptop 
 boot into archiso
 pacman -Sy git
