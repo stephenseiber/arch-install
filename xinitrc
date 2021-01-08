@@ -1,2 +1,2 @@
-xrandr --setprovideroutputsource modesetting NVIDIA-G0
+xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
