@@ -39,18 +39,12 @@ if [ $gamer == no ]
 then
 cp /arch-install/makepkg /etc/makepkg.conf;
 cp /arch-install/arch.conf /boot/loader/entries/arch.conf;
-echo '[Autologin]' > /etc/sddm.conf.d/autologin.conf
-echo 'User='$user >> /etc/sddm.conf.d/autologin.conf
-echo 'Session=plasmawayland' >> /etc/sddm.conf.d/autologin.conf
     else
     cp /arch-install/makepkgN.conf /etc/makepkg.conf;
     cp /arch-install/nvidia-drm.conf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
     cp /arch-install/xinitrc /home/$user/.xinitrc
     cp /arch-install/sddm /usr/share/sddm/scripts/Xsetup
     cp /arch-install/homeN.tar.gz home.tar.gz;
-    echo '[Autologin]' > /etc/sddm.conf.d/autologin.conf
-    echo 'User='$user >> /etc/sddm.conf.d/autologin.conf
-    echo 'Session=plasma.desktop' >> /etc/sddm.conf.d/autologin.conf
     pacman -S - </packageN.txt --noconfirm;
     pip install requests vdf;
     sudo pacman -R amdvlk lib32-amdvlk --noconfirm;
