@@ -8,3 +8,4 @@ opencl-nvidia
 ppsspp
 lib32-vkd3d
 vkd3d
+nvidia-prime
