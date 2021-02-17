@@ -4,3 +4,4 @@ pacman -Sy git
 git clone https://github.com/stephenseiber/arch-install.git
 cd arch-install
 sh part1.sh
+https://neosmart.net/wiki/fix-mbr/
