@@ -1,3 +1,4 @@
+pipewire-pulse
 lib32-vulkan-intel
 vulkan-intel
 0ad
@@ -28,7 +29,7 @@ openmw
 wine-staging
 lutris
 winetricks
-pulseaudio-bluetooth
+pavucontrol
 vivaldi
 vivaldi-ffmpeg-codecs
 kde-education-meta
