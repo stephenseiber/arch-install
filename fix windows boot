@@ -1,0 +1,10 @@
+boot into windows usb
+hit recover
+hit troubleshoot
+hit command promt
+Bootrec /RebuildBcd
+exit
+hit trouble shoot
+hit startup repair
+boot into uefi disable windows bootloader
+now windows will boot
