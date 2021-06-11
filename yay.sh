@@ -1,8 +1,11 @@
-git clone https://aur.archlinux.org/yay.git
-cd yay
+#git clone https://aur.archlinux.org/yay.git
+#cd yay
+#makepkg -si --noconfirm
+#cd ..
+#rm -Rf yay
+#yay -S kalu-kde --noconfirm
+git clone https://aur.archlinux.org/canon-pixma-mg2500-complete.git
+cd cd canon-pixma-mg2500-complete
 makepkg -si --noconfirm
 cd ..
-rm -Rf yay
-yay -S kalu-kde --noconfirm
-
-
+rm -Rf canon-pixma-mg2500-complete
