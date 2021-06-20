@@ -29,10 +29,10 @@ passwd
 echo passwd set
 echo "${hostname}" > /etc/hostname
 #mkdir -p /home/$user/
-#cd /home/$user/
-#cp /arch-install/yay.sh yay.sh
-#/bin/su -c "sh yay.sh" - $user;
-#rm -r yay.sh
+cd /home/$user/
+cp /arch-install/yay.sh yay.sh
+/bin/su -c "sh yay.sh" - $user;
+rm -r yay.sh
 echo is this gaming laptop
 read gamer
 if [ $gamer == no ]
