@@ -9,3 +9,4 @@ cd cd canon-pixma-mg2500-complete
 makepkg -si --noconfirm
 cd ..
 rm -Rf canon-pixma-mg2500-complete
+cd ..
