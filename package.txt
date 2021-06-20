@@ -38,3 +38,5 @@ kde-games-meta
 kde-utilities-meta
 kde-system-meta
 packagekit-qt5
+cups
+system-config-printer
