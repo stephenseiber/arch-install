@@ -1,4 +1,4 @@
-pipewire-pulse
+ipewire-pulse
 lib32-vulkan-intel
 vulkan-intel
 0ad
@@ -40,3 +40,14 @@ kde-system-meta
 packagekit-qt5
 cups
 system-config-printer
+qbittorrent
+nvidia
+lib32-nvidia-utils
+lib32-opencl-nvidia
+nvidia-settings
+python-pip
+opencl-nvidia
+ppsspp
+lib32-vkd3d
+vkd3d
+nvidia-prime
