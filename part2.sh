@@ -19,6 +19,7 @@ pacman-key --populate archlinux
 cp /arch-install/sudoers /etc/sudoers
 echo name computer
 read hostname
+echo "${hostname}" > /etc/hostname
 echo name user
 read user
 useradd -m -g users -G wheel -s /bin/fish $user
@@ -27,73 +28,17 @@ passwd $user
 echo "what do you want root passwd to be"
 passwd
 echo passwd set
-echo "${hostname}" > /etc/hostname
-#mkdir -p /home/$user/
-cd /home/$user/
-cp /arch-install/yay.sh yay.sh
-/bin/su -c "sh yay.sh" - $user;
-rm -r yay.sh
-echo is this gaming laptop
-read gamer
-if [ $gamer == no ]
-then
-cp /arch-install/makepkg /etc/makepkg.conf;
-cp /arch-install/arch.conf /boot/loader/entries/arch.conf;
-    else
-    cp /arch-install/makepkgN.conf /etc/makepkg.conf;
-    pacman -S - </packageN.txt --noconfirm;
-    pip install requests vdf;
-    cp /arch-install/mkinitcpio.conf /etc/mkinitcpio.conf;
-    cp /arch-install/nvidia.hook /etc/pacman.d/hooks/nvidia.hook;
-    cp /arch-install/archN.conf /boot/loader/entries/arch.conf;        
-    rm -r /packageN.txt;
-    mkinitcpio -p linux;
-    echo first not root drive name?
-    read drivea
-    mkdir -p /home/$user/$drivea
-    devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac) ;
-    devicea=$(dialog --stdout --menu "Select drivea" 0 0 0 ${devicelist}) ;
-    if [ ${devicea} == '/dev/sdb' ] || [ ${devicea} == '/dev/sda' ] ;
-        then parta="${devicea}1";
-        echo $parta is selected drive;
-        uuid=$(blkid -o value -s UUID $parta);
-        echo $uuid;
-        echo "UUID=$uuid       /home/$user/$drivea     ext4            rw,relatime     0 2" >> /etc/fstab;
-        mount $parta /home/$user/$drivea;
-        else parta="${devicea}p1";
-        echo $parta is selected drive;
-        mount $parta /home/$user//$drivea;
-        uuid=$(blkid -o value -s UUID $parta);
-        echo $uuid;
-        echo "UUID=$uuid       /home/$user/$drivea     ext4            rw,relatime     0 2" >> /etc/fstab;
-
-    fi
-    echo second non root drive name? if no second non root drive type no;
-    read driveb
-        if [ $driveb == 'no' ] ;
-        then echo "done" 
-        else mkdir -p /home/$user/$driveb;
-        devicelist=$(lsblk -dplnx size -o name,size | grep -Ev "boot|rpmb|loop" | tac) ;
-        deviceb=$(dialog --stdout --menu "Select drivea" 0 0 0 ${devicelist}) ;
-            if [ ${deviceb} == '/dev/sdb' ] || [ ${deviceb} == '/dev/sda' ] ;
-            then partb="${deviceb}1";
-            uuid=$(blkid -o value -s UUID $partb);
-            echo $uuid;
-            echo $partb is selected drive;
-            mount $partb /home/$user/$driveb;
-            echo "$UUID=$uuid       /home/$user/$driveb     ext4            rw,relatime     0 2" >> /etc/fstab;
-            else partb="${deviceb}p1";
-            echo $partb is selected drive;
-            mount $partb /home/$user/$driveb;
-            uuid=$(blkid -o value -s UUID $partb);
-            echo $uuid;
-            echo "UUID=$uuid       /home/$user/$driveb     ext4            rw,relatime     0 2" >> /etc/fstab;
-        fi
-    fi
-fi
+cp /arch-install/makepkgN.conf /etc/makepkg.conf;
+cp /arch-install/homeN.tar.gz home.tar.gz;
+cp /arch-install/yay.sh yay.sh;
+pip install requests vdf;
+sudo pacman -R amdvlk lib32-amdvlk --noconfirm;
+cp /arch-install/mkinitcpio.conf /etc/mkinitcpio.conf;
+cp /arch-install/nvidia.hook /etc/pacman.d/hooks/nvidia.hook;
+cp /arch-install/archN.conf /boot/loader/entries/arch.conf;
+mkinitcpio -p linux;       
 echo this is still working
 echo thumbs up
-chown -R $user /home/$user
 clear
 rm -r /arch-install
 echo done
