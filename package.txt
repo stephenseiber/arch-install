@@ -1,7 +1,6 @@
-ipewire-pulse
+pipewire-pulse
 lib32-vulkan-intel
 vulkan-intel
-0ad
 dialog
 base
 linux
@@ -14,7 +13,6 @@ git
 plasma-meta
 plasma-wayland-session
 steam-native-runtime
-openra
 intel-ucode
 ntfs-3g
 vlc
@@ -25,7 +23,6 @@ wget
 unzip
 discord
 vulkan-tools
-openmw
 wine-staging
 lutris
 winetricks
@@ -34,7 +31,6 @@ vivaldi
 vivaldi-ffmpeg-codecs
 kde-education-meta
 kde-accessibility-meta
-kde-games-meta
 kde-utilities-meta
 kde-system-meta
 packagekit-qt5
@@ -51,3 +47,4 @@ ppsspp
 lib32-vkd3d
 vkd3d
 nvidia-prime
+spectacle
