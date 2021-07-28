@@ -48,4 +48,4 @@ lib32-vkd3d
 vkd3d
 nvidia-prime
 spectacle
-budgie-desktop 
+budgie-desktop
