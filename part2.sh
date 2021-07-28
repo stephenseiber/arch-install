@@ -29,10 +29,7 @@ echo "what do you want root passwd to be"
 passwd
 echo passwd set
 cp /arch-install/makepkgN.conf /etc/makepkg.conf;
-cp /arch-install/homeN.tar.gz home.tar.gz;
-cp /arch-install/yay.sh yay.sh;
 pip install requests vdf;
-sudo pacman -R amdvlk lib32-amdvlk --noconfirm;
 cp /arch-install/mkinitcpio.conf /etc/mkinitcpio.conf;
 cp /arch-install/nvidia.hook /etc/pacman.d/hooks/nvidia.hook;
 cp /arch-install/archN.conf /boot/loader/entries/arch.conf;
