@@ -1,6 +1,14 @@
 boot into ventoy by hitting escape key followed by F9 on non gaming laptop and f2 key on gaming laptop 
 boot into archiso
 pacman -Sy git
+
+
+#for this error use the two following commands
+#error: could not open file /var/lib/pacman/sync/multilib.db: Unrecognized archive format
+#sudo rm -R /var/lib/pacman/sync
+#sudo pacman -Syu
+
+
 git clone https://github.com/stephenseiber/arch-install.git
 cd arch-install
 sh part1.sh
