@@ -1,21 +1,21 @@
 mount -o remount,size=4G /run/archiso/cowspace
 df -l
-pacman -Sy reflector dialog --noconfirm
+pacman -Sy reflector --noconfirm
 ls /sys/firmware/efi/efivars
 timedatectl set-ntp true
 reflector --latest 50 --verbose  --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-parted --script /dev/sda -- mklabel gpt \
+parted --script /dev/nvme0n1 -- mklabel gpt \
   mkpart ESP fat32 1Mib 275MiB \
   set 1 boot on \
   mkpart primary ext4 275MiB 100%
-wipefs /dev/sda1
-wipefs /dev/sda2
-mkfs.vfat -F32 /dev/sda1
-mkfs.ext4 /dev/sda2
-e2label /dev/sda2 arch
-mount /dev/sda2 /mnt
+wipefs /dev/nvme0n1p1
+wipefs /dev/nvme0n1p2
+mkfs.vfat -F32 /dev/nvme0n1p1
+mkfs.ext4 /dev/nvme0n1p2
+e2label /dev/nvme0n1p2 arch
+mount /dev/nvme0n1p2 /mnt
 mkdir -p /mnt/boot
-mount /dev/sda1 /mnt/boot
+mount /dev/nvme0n1p1 /mnt/boot
 dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048 status=progress
 chmod 600 /mnt/swapfile
 mkswap /mnt/swapfile
