@@ -1,7 +1,6 @@
 pipewire-pulse
 lib32-vulkan-intel
 vulkan-intel
-dialog
 base
 linux
 linux-firmware
@@ -9,18 +8,15 @@ reflector
 nano
 fish
 base-devel
-git
 plasma-meta
 plasma-wayland-session
 steam-native-runtime
 intel-ucode
 ntfs-3g
 vlc
-gparted
 bluez
 bluez-utils
 wget
-unzip
 discord
 vulkan-tools
 wine-staging
@@ -29,11 +25,8 @@ winetricks
 pavucontrol
 vivaldi
 vivaldi-ffmpeg-codecs
-kde-education-meta
-kde-accessibility-meta
 kde-utilities-meta
 kde-system-meta
-packagekit-qt5
 cups
 system-config-printer
 qbittorrent
@@ -51,3 +44,5 @@ spectacle
 budgie-desktop
 xfce4
 xfce4-goodies
+libreoffice-fresh
+knotes
