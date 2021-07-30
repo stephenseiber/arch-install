@@ -49,3 +49,5 @@ vkd3d
 nvidia-prime
 spectacle
 budgie-desktop
+xfce4
+xfce4-goodies
