@@ -1,5 +1,4 @@
 cp pacman.conf /mnt/etc/pacman.conf
-cp package.txt /mnt/package.txt
 cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 cp /arch-install/locale.gen /mnt/etc/locale.gen
 mkdir -p /mnt/etc/pacman.d/hooks
