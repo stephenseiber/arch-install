@@ -1,1 +1,1 @@
-sh ~/arch-install/sh/part1.sh
+sh /sh/part1.sh
