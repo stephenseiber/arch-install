@@ -1,5 +1,6 @@
 mount -o remount,size=4G /run/archiso/cowspace
 df -l
+cp /copy/pacman.conf /etc/pacman.conf
 pacman -Sy reflector --noconfirm
 ls /sys/firmware/efi/efivars
 timedatectl set-ntp true
