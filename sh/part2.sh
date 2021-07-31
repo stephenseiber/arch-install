@@ -13,6 +13,6 @@ pip install requests vdf
 mkinitcpio -p linux       
 sh /user.sh
 rm -R /user.sh
-#pacman -S virtualbox-guest-utils --noconfirm
-#systemctl enable vboxservice
+pacman -S virtualbox-guest-utils --noconfirm
+systemctl enable vboxservice
 exit
