@@ -10,4 +10,4 @@ cp /copy/makepkg.conf /mnt/etc/makepkg.conf
 cp /copy/mkinitcpio.conf /mnt/etc/mkinitcpio.conf
 cp /copy/nvidia.hook /mnt/etc/pacman.d/hooks/nvidia.hook
 cp /copy/arch.conf /mnt/boot/loader/entries/arch.conf
-arch-chroot /mnt /bin/bash /arch-install/sh/part2.sh
+arch-chroot /mnt /bin/bash /sh/part2.sh
