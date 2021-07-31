@@ -11,4 +11,5 @@ cp copy/mkinitcpio.conf /mnt/etc/mkinitcpio.conf
 cp copy/nvidia.hook /mnt/etc/pacman.d/hooks/nvidia.hook
 cp copy/arch.conf /mnt/boot/loader/entries/arch.conf
 cp sh/user.sh /mnt/user.sh
-arch-chroot /mnt /bin/bash sh/part2.sh
+cp sh/part2.sh /mnt/part2.sh
+arch-chroot /mnt /bin/bash /part2.sh
