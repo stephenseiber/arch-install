@@ -11,3 +11,4 @@ cp ~/arch-install/makepkgN.conf /mnt/etc/makepkg.conf
 cp ~/arch-install/mkinitcpio.conf /mnt/etc/mkinitcpio.conf
 cp ~/arch-install/nvidia.hook /mnt/etc/pacman.d/hooks/nvidia.hook
 cp ~/arch-install/archN.conf /mnt/boot/loader/entries/arch.conf
+arch-chroot /mnt /bin/bash /arch-install/part2.sh
