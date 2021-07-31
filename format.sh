@@ -14,3 +14,4 @@ dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048 status=progress
 chmod 600 /mnt/swapfile
 mkswap /mnt/swapfile
 swapon /mnt/swapfile
+sh pacstrap.sh
