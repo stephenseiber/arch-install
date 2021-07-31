@@ -1,7 +1,4 @@
-boot into ventoy by hitting escape key followed by F9 on non gaming laptop and f2 key on gaming laptop 
-boot into archiso
 pacman -Sy git
 git clone https://github.com/stephenseiber/arch-install.git
 cd arch-install
 sh begin.sh
-https://neosmart.net/wiki/fix-mbr/
