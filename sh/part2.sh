@@ -11,5 +11,6 @@ pacman-key --init
 pacman-key --populate archlinux
 pip install requests vdf
 mkinitcpio -p linux       
-sh user.sh
+sh /user.sh
+rm -R /user.sh
 exit
