@@ -22,7 +22,8 @@ vivaldi
 vivaldi-ffmpeg-codecs
 kde-utilities-meta
 kde-system-meta
-cups system-config-printer
+cups
+system-config-printer
 qbittorrent
 nvidia
 lib32-nvidia-utils
