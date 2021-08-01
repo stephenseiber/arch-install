@@ -10,6 +10,7 @@ cp copy/mkinitcpio.conf /mnt/etc/mkinitcpio.conf
 cp copy/nvidia.hook /mnt/etc/pacman.d/hooks/nvidia.hook
 cp sh/user.sh /mnt/user.sh
 cp sh/part2.sh /mnt/part2.sh
+cp sh/packages /mnt/packages
 arch-chroot /mnt /bin/bash /part2.sh
 cp copy/loader.conf /mnt/boot/loader/loader.conf
 cp copy/arch.conf /mnt/boot/loader/entries/arch.conf
