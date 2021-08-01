@@ -1,6 +1,7 @@
 locale-gen
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
 hwclock --systohc --utc
+pacman -Syu - </package --noconfirm
 bootctl install
 systemctl enable reflector
 systemctl enable sddm
