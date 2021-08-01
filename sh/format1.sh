@@ -8,6 +8,7 @@ part_boot="$(ls ${device}* | grep -E "^${device}p?1$")"
 part_root="$(ls ${device}* | grep -E "^${device}p?2$")"
 mkfs.vfat -F32 "${part_boot}"
 mkfs.ext4 -f "${part_root}"
+e2label "${part_boot}" arch
 mount "${part_root}" /mnt
 mkdir /mnt/boot
 mount "${part_boot}" /mnt/boot
