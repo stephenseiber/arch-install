@@ -13,10 +13,10 @@ e2label "${part_root}" arch
 mount "${part_root}" /mnt
 mkdir /mnt/boot
 mount "${part_boot}" /mnt/boot
-echo desired swap size in Mib
+echo desired swap file size in MiB
 read swap
 dd if=/dev/zero of=/mnt/swapfile bs=1M count=$swap status=progress
 chmod 600 /mnt/swapfile
 mkswap /mnt/swapfile
 swapon /mnt/swapfile
-#sh sh/pacstrap.sh
+sh sh/pacstrap.sh
