@@ -1,6 +1,4 @@
 pipewire-pulse
-lib32-vulkan-intel
-vulkan-intel
 reflector
 base-devel
 plasma-meta
@@ -42,4 +40,4 @@ xfce4-goodies
 libreoffice-fresh
 knotes
 neofetch
-nvtop 
+nvtop
