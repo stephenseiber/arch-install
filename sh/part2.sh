@@ -7,6 +7,7 @@ systemctl enable reflector
 systemctl enable sddm
 systemctl enable bluetooth
 systemctl enable NetworkManager
+systemctl enable cups
 chsh -s /bin/fish
 pacman-key --init
 pacman-key --populate archlinux
