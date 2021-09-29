@@ -1,5 +1,5 @@
 cp copy/pacman.conf /etc/pacman.conf
-reflector --latest 20 --verbose --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+reflector --latest 30 --verbose --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 pacman -Sy dialog --noconfirm
 ls /sys/firmware/efi/efivars
 timedatectl set-ntp true
