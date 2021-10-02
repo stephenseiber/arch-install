@@ -1,5 +1,5 @@
 pacman -Sy dialog pacredir --noconfirm
-systemctl start pacredir
+#systemctl start pacredir
 systemctl enable pacredir
 locale-gen
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
