@@ -1,8 +1,7 @@
-pacman -Sy dialog pacredir --noconfirm
+pacman -Sy dialog --noconfirm
 locale-gen
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
 hwclock --systohc --utc
-systemctl start pacredir
 pacman -Syu - </packages --noconfirm
 bootctl install
 systemctl enable pacredir
