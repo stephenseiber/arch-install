@@ -1,4 +1,5 @@
-pacman -Sy git
+pacman -Sy git pacredir
+systemctl start pacredir
 git clone https://github.com/stephenseiber/arch-install.git
 cd arch-install
 sh begin.sh
