@@ -5,7 +5,6 @@ ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
 hwclock --systohc --utc
 pacman -Syu - </packages --noconfirm
 bootctl install
-systemctl enable reflector
 systemctl enable sddm
 systemctl enable bluetooth
 systemctl enable NetworkManager
