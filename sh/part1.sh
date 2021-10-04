@@ -7,4 +7,4 @@ cp copy/pacman.conf /etc/pacman.conf
 ls /sys/firmware/efi/efivars
 timedatectl set-ntp true
 sh sh/format.sh
-reboot
+#reboot
