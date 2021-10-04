@@ -12,5 +12,6 @@ cp sh/yay.sh /mnt/yay.sh
 cp sh/part2.sh /mnt/part2.sh
 cp sh/packages /mnt/packages
 arch-chroot /mnt /bin/bash /part2.sh
+rm -r /mnt/part2.sh
 cp copy/loader.conf /mnt/boot/loader/loader.conf
 cp copy/arch.conf /mnt/boot/loader/entries/arch.conf
