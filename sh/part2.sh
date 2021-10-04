@@ -15,4 +15,6 @@ pip install requests vdf
 mkinitcpio -p linux       
 sh /user.sh
 rm -R /user.sh
+rm -R /yay.sh
+rm -R packages
 exit
