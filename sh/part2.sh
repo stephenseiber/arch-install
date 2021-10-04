@@ -1,12 +1,10 @@
-pacman -Sy dialog pacredir --noconfirm
+pacman -Sy dialog --noconfirm
 locale-gen
-systemctl start pacredir
 cp copy/pacman.conf /mnt/etc/pacman.conf
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
 hwclock --systohc --utc
 pacman -Syu - </packages --noconfirm
 bootctl install
-systemctl enable pacredir
 systemctl enable reflector
 systemctl enable sddm
 systemctl enable bluetooth
