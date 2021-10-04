@@ -1,6 +1,5 @@
 pacman -Sy dialog --noconfirm
 locale-gen
-cp copy/pacman.conf /mnt/etc/pacman.conf
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
 hwclock --systohc --utc
 pacman -Syu - </packages --noconfirm
