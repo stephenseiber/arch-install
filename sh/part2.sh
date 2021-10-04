@@ -1,5 +1,7 @@
 pacman -Sy dialog pacredir --noconfirm
 locale-gen
+systemctl start pacredir
+cp copy/pacman.conf /mnt/etc/pacman.conf
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
 hwclock --systohc --utc
 pacman -Syu - </packages --noconfirm
