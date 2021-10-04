@@ -8,6 +8,7 @@ cp copy/makepkg.conf /mnt/etc/makepkg.conf
 cp copy/mkinitcpio.conf /mnt/etc/mkinitcpio.conf
 cp copy/nvidia.hook /mnt/etc/pacman.d/hooks/nvidia.hook
 cp sh/user.sh /mnt/user.sh
+cp sh/yay.sh /mnt/yay.sh
 cp sh/part2.sh /mnt/part2.sh
 cp sh/packages /mnt/packages
 arch-chroot /mnt /bin/bash /part2.sh
