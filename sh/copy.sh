@@ -1,4 +1,4 @@
-
+cp copy/pacman.conf /mnt/etc/pacman.conf
 cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 cp copy/locale.gen /mnt/etc/locale.gen
 mkdir -p /mnt/etc/pacman.d/hooks
