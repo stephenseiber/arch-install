@@ -9,4 +9,5 @@ passwd $user
 echo "what do you want root passwd to be"
 passwd
 echo passwd set
-sh yay.sh
+/bin/su -c "sh yay.sh" - $yay
+userdel yay
