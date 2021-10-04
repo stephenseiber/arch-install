@@ -1,5 +1,3 @@
-useradd -m -g users -G wheel -s /bin/fish yay
-su yay
 mkdir -p /tmp/yay
 cd /tmp/yay
 git clone https://aur.archlinux.org/yay.git
