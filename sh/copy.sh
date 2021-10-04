@@ -3,7 +3,6 @@ cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 cp copy/locale.gen /mnt/etc/locale.gen
 mkdir -p /mnt/etc/pacman.d/hooks
 cp copy/100-systemd-boot.hook /mnt/etc/pacman.d/hooks/100-systemd-boot.hook
-cp copy/reflector.conf /mnt/etc/xdg/reflector/reflector.conf
 cp copy/sudoers /mnt/etc/sudoers
 cp copy/makepkg.conf /mnt/etc/makepkg.conf
 cp copy/mkinitcpio.conf /mnt/etc/mkinitcpio.conf
