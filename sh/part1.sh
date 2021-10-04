@@ -4,4 +4,5 @@ pacman -Sy dialog --noconfirm
 ls /sys/firmware/efi/efivars
 timedatectl set-ntp true
 sh sh/format.sh
+rm -r /mnt/part2.sh
 reboot
