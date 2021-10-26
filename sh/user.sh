@@ -9,5 +9,3 @@ passwd $user
 echo "what do you want root passwd to be"
 passwd
 echo passwd set
-
-
