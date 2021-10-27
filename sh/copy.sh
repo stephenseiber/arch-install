@@ -15,3 +15,4 @@ arch-chroot /mnt /bin/bash /part2.sh
 rm -r /mnt/part2.sh
 cp copy/loader.conf /mnt/boot/loader/loader.conf
 cp copy/arch.conf /mnt/boot/loader/entries/arch.conf
+cp copy/reflector.service /mnt/reflector.service
