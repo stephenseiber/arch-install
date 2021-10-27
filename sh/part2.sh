@@ -1,9 +1,11 @@
+reflector --latest 19 --verbose --protocol https --sort rate --save /etc/pacman.d/mirrorlist -c US --ipv6
 pacman -Sy dialog --noconfirm
 locale-gen
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
 hwclock --systohc --utc
 pacman -Syu - </packages --noconfirm
 bootctl install
+systemctl enable reflector
 systemctl enable sddm
 systemctl enable bluetooth
 systemctl enable NetworkManager
