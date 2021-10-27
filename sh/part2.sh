@@ -1,4 +1,4 @@
-reflector --latest 19 --verbose --protocol https --sort rate --save /etc/pacman.d/mirrorlist -c US --ipv6
+reflector --latest 50 --verbose --protocol https --sort rate --save /etc/pacman.d/mirrorlist -c US --ipv6
 pacman -Sy dialog --noconfirm
 locale-gen
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
