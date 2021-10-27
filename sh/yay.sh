@@ -13,3 +13,8 @@ cd /tmp/ttf-ms-fonts
 git clone https://aur.archlinux.org/ttf-ms-fonts.git
 cd ttf-ms-fonts/
 makepkg -si --noconfirm
+touch panel-restart
+echo '#!/bin/bash' > panel-restart
+echo 'killall plasmashell;plasmashell &' >> panel-restart
+sudo chmod +x panel-restart
+sudo mv panel-restart /usr/bin/
