@@ -28,7 +28,6 @@ wine-staging
 lutris
 winetricks
 plasma-meta
-qt6-wayland
 knotes
 plasma-wayland-session
 kde-utilities-meta
@@ -37,9 +36,6 @@ packagekit-qt5
 fwupd
 flatpak
 spectacle
-budgie-desktop
-xfce4
-xfce4-goodies
 libreoffice-fresh
 qbittorrent
 vivaldi
