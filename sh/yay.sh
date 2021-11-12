@@ -18,3 +18,8 @@ echo '#!/bin/bash' > panel-restart
 echo 'killall plasmashell;plasmashell &' >> panel-restart
 sudo chmod +x panel-restart
 sudo mv panel-restart /usr/bin/
+touch reflector-update
+echo '#!/bin/bash' > reflector-update
+echo 'sudo reflector --latest 50 --verbose --protocol https --sort rate --save /etc/pacman.d/mirrorlist -c US --ipv6' >> reflector-update
+sudo chmod +x reflector-update
+sudo mv reflector-update /usr/bin
